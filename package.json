@@ -4,7 +4,8 @@
   "description": "employee tracker",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index"
+    "start": "node src/index",
+    "type": "module"
   },
   "repository": {
     "type": "git",
