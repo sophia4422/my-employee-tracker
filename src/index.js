@@ -78,10 +78,11 @@ const init = async () => {
 
     if (pickAnOption === "quit") {
       console.log("Byeeeeeeee!!");
+
+      //set inProgress to false
+      inProgress = false;
     }
   }
-
-  //if you pick quit, set inProgress to false
 };
 
 init();
