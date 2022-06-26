@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/sophia4422/my-employee-tracker#readme",
   "dependencies": {
-    "inquirer": "^9.0.0"
+    "inquirer": "^8.2.4"
   }
 }
