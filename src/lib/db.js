@@ -9,4 +9,6 @@ const dbOptions = {
 
 const db = mysql.createConnection(dbOptions);
 
-db();
+module.exports = {
+  db,
+};

@@ -5,3 +5,5 @@ VALUES ("Bob", "Smith", "Software Engineer", "Engineering", "50000", "Aaron Pate
 ("Sofia", "Oliveira", "Lawyer", "Legal", "50000", "Davey Jones"),
 ("Patrick", "Estrella", "Sales Assistant", "Sales", "40000", "Megan Knowles"),
 ("Stephen", "Calamardo", "Accountant", "Finance", "40000", "Eugine Krabs"),
+
+--role id is the foreign key

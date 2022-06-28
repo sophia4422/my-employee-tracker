@@ -1,3 +1,2 @@
 
-INSERT INTO departments (department_name) 
-VALUES (Engineering), (Finance), (Legal), (Sales);
+INSERT INTO workplace_db.departments (department_name) VALUES ("Engineering"), ("Finance"), ("Legal"), ("Sales")
