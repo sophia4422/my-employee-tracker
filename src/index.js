@@ -51,7 +51,7 @@ const init = async () => {
     if (pickAnOption === "viewAllDepartments") {
       console.log("Here are the departments...");
       //display a table in the console with the id and name columns
-      //the id should be auto_inc? and the name will be: engineers, finance, legal, sales
+      //the id will be 1,2,3,4 and the name will be: engineers, finance, legal, sales
     }
 
     if (pickAnOption === "viewAllRoles") {
