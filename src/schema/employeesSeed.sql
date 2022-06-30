@@ -4,4 +4,4 @@ VALUES ("Patrick", "Estrella", 2, NULL),
 ("Stephen", "Calamardo", 4, NULL),
 ("Sandy", "Cheekys", 3, NULL),
 ("Bob", "Esponja", 6, NULL),
-("Gary", "Plank", 5, NULL)
+("Gary", "Plank", 5, NULL);

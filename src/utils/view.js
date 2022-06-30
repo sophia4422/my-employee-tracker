@@ -1,14 +1,21 @@
 const mysql = require("mysql");
 const myDatabase = require("../lib/db");
 
-const departmentQuery = "SELECT * FROM departments";
+const getDepartments = async (db) => {
+  const departments = await this.db.query("SELECT * FROM departments");
+  console.log(departments);
+};
 
-const employeeList = "SELECT * FROM employees";
+const employeeList = (db) => {
+  const employees = "SELECT * FROM employees";
+};
 
-const rolesQuery = "SELECT * FROM roles";
+const getRoles = (db) => {
+  const roles = "SELECT * FROM roles";
+};
 
 module.exports = {
-  departmentQuery,
+  getDepartments,
   employeeList,
-  rolesQuery,
+  getRoles,
 };

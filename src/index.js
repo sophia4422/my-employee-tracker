@@ -1,4 +1,8 @@
 const inquirer = require("inquirer");
+const { db } = require("./lib/db");
+const { getDepartments } = require("./utils/view");
+const { employeeList } = require("./utils/view");
+const { getRoles } = require("./utils/view");
 
 const init = async () => {
   //In progress
@@ -52,6 +56,7 @@ const init = async () => {
       console.log("Here are the departments...");
       //display a table in the console with the id and name columns
       //the id will be 1,2,3,4 and the name will be: engineers, finance, legal, sales
+      getDepartments(db);
     }
 
     if (pickAnOption === "viewAllRoles") {
@@ -59,11 +64,13 @@ const init = async () => {
       //display a table in the console with the columns id, title, department & salary
       //title will be the roles, eg Sales Lead, Software Engineer, Lawyer etc
       //each role will belong to a department eg SE = Engineering, Lawyer = Legal
+      employeeList(db);
     }
 
     if (pickAnOption === "viewAllEmployees") {
       console.log("Here are all the employees...");
       //view a table in the console with the id, first_name, last-name, title, department, salary and the employee's manager
+      getRoles(db);
     }
 
     if (pickAnOption === "addADepartment") {
