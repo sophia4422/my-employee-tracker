@@ -1,9 +1,7 @@
-INSERT INTO employees (first_name, last_name, title, department, salary, manager) 
-VALUES ("Bob", "Smith", "Software Engineer", "Engineering", "50000", "Aaron Patel"),
-("Lucinda", "Alvarez", "Software Engineer", "Engineering", "55000", "Aaron Patel"),
-("Camilla", "Garcia", "Lawyer", "Legal", "50000", "Freddy Fred"),
-("Sofia", "Oliveira", "Lawyer", "Legal", "50000", "Davey Jones"),
-("Patrick", "Estrella", "Sales Assistant", "Sales", "40000", "Megan Knowles"),
-("Stephen", "Calamardo", "Accountant", "Finance", "40000", "Eugine Krabs"),
-
---role id is the foreign key
+INSERT INTO employees (first_name, last_name, role_id, manager_id) 
+VALUES ("Patrick", "Estrella", 2, NULL),
+("Eugine", "Krabs", 1, NULL),
+("Stephen", "Calamardo", 4, NULL),
+("Sandy", "Cheekys", 3, NULL),
+("Bob", "Esponja", 6, NULL),
+("Gary", "Plank", 5, NULL)
