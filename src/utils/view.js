@@ -2,8 +2,8 @@ const mysql = require("mysql");
 const myDatabase = require("../lib/db");
 
 const getDepartments = async (db) => {
-  const departments = await this.db.query("SELECT * FROM departments");
-  console.log(departments);
+  const departments = await db.query("SELECT * FROM departments");
+  console.table(departments);
 };
 
 const employeeList = (db) => {
