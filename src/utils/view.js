@@ -1,7 +1,6 @@
 const getDepartments = async (db) => {
   const [departments] = await db.query("SELECT * FROM departments");
   console.table(departments);
-  // return departments;
 };
 
 const employeeList = async (db) => {

@@ -37,13 +37,6 @@ const addEmployeeQuestions = [
     name: "firstName",
     type: "input",
     message: "What is the employee's first name?",
-    //i am prompted with the question 'what is the employee's first name?'
-    //i enter the fn
-    //i am prompted with the question 'what is the employee's last name?'
-    //i enter the ln
-    //i am prompted with the question 'what is the employee's role?'
-    //i am given a list of the roles to choose from
-    //i am prompted with the question 'who is the employee's manager?'
   },
   {
     name: "lastName",
