@@ -64,13 +64,13 @@ const init = async () => {
       //display a table in the console with the columns id, title, department & salary
       //title will be the roles, eg Sales Lead, Software Engineer, Lawyer etc
       //each role will belong to a department eg SE = Engineering, Lawyer = Legal
-      employeeList(db);
+      await getRoles(db);
     }
 
     if (pickAnOption === "viewAllEmployees") {
       console.log("Here are all the employees...");
       //view a table in the console with the id, first_name, last-name, title, department, salary and the employee's manager
-      getRoles(db);
+      await employeeList(db);
     }
 
     if (pickAnOption === "addADepartment") {

@@ -5,11 +5,12 @@ const getDepartments = async (db) => {
 };
 
 const employeeList = async (db) => {
-  const employees = await db.query(`SELECT * FROM employees`);
+  const [employees] = await db.query("SELECT * FROM employees");
+  console.table(employees);
 };
 
 const getRoles = async (db) => {
-  const roles = await db.query(`SELECT * FROM roles`);
+  const [roles] = await db.query("SELECT * FROM roles");
   console.table(roles);
 };
 
