@@ -1,0 +1,25 @@
+{
+  "name": "my-employee-tracker",
+  "version": "1.0.0",
+  "description": "employee tracker",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sophia4422/my-employee-tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sophia4422/my-employee-tracker/issues"
+  },
+  "homepage": "https://github.com/sophia4422/my-employee-tracker#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3"
+  }
+}
