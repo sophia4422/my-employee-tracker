@@ -7,11 +7,12 @@ const dbOptions = {
   database: "workplace_db",
 };
 
-const db = mysql.createConnection(dbOptions);
+const initDatabase = async () => {
+  const db = await mysql.createConnection(dbOptions);
+  return db;
+};
 
 //query the database
 //db.query
 
-module.exports = {
-  db,
-};
+module.exports = initDatabase;

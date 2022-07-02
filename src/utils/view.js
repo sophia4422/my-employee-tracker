@@ -1,14 +1,11 @@
-const mysql = require("mysql2");
-const db = require("../lib/db");
-
 const getDepartments = async (db) => {
-  const departments = await db.query("SELECT * FROM departments");
+  const [departments] = await db.query("SELECT * FROM departments");
   console.table(departments);
+  // return departments;
 };
 
 const employeeList = async (db) => {
   const employees = await db.query(`SELECT * FROM employees`);
-  console.table(employees);
 };
 
 const getRoles = async (db) => {

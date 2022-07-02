@@ -1,5 +1,5 @@
 const inquirer = require("inquirer");
-const db = require("./lib/db");
+const database = require("./lib/db");
 const { getDepartments } = require("./utils/view");
 const { employeeList } = require("./utils/view");
 const { getRoles } = require("./utils/view");
@@ -7,7 +7,7 @@ const { getRoles } = require("./utils/view");
 const init = async () => {
   //In progress
   let inProgress = true;
-
+  const db = await database();
   while (inProgress) {
     const options = [
       {
@@ -56,7 +56,7 @@ const init = async () => {
       console.log("Here are the departments...");
       //display a table in the console with the id and name columns
       //the id will be 1,2,3,4 and the name will be: engineers, finance, legal, sales
-      getDepartments(db);
+      await getDepartments(db);
     }
 
     if (pickAnOption === "viewAllRoles") {
