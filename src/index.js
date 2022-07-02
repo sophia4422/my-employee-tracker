@@ -1,5 +1,5 @@
 const inquirer = require("inquirer");
-const { db } = require("./lib/db");
+const db = require("./lib/db");
 const { getDepartments } = require("./utils/view");
 const { employeeList } = require("./utils/view");
 const { getRoles } = require("./utils/view");
