@@ -3,6 +3,11 @@ const database = require("./lib/db");
 const { getDepartments } = require("./utils/view");
 const { employeeList } = require("./utils/view");
 const { getRoles } = require("./utils/view");
+const {
+  addNewDepartment,
+  addNewRole,
+  addNewEmployee,
+} = require("./utils/utils");
 
 const addDepartmentQuestions = [
   {
