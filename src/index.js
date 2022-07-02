@@ -138,6 +138,7 @@ const init = async () => {
       const addDepartmentAnswers = await inquirer.prompt(
         addDepartmentQuestions
       );
+      addNewDepartment(db, addDepartmentAnswers);
     }
 
     if (pickAnOption === "addARole") {

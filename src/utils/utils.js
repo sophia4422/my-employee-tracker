@@ -5,16 +5,20 @@ const addNewDepartment = async (db, addDepartmentAnswers) => {
   );
 };
 
-const addNewRole = (db, addRoleAnswers) => {
-    await db.query(`INSERT INTO roles (title, salary) VALUES ("${addRoleAnswers.newRole}", ("${addRoleAnswers.salary}")`)
+const addNewRole = async (db, addRoleAnswers) => {
+  await db.query(
+    `INSERT INTO roles (title, salary) VALUES ("${addRoleAnswers.newRole}", ("${addRoleAnswers.salary}")`
+  );
 };
 
-const addNewEmployee = (db, addEmployeeAnswers) => {
-    await db.query(`INSERT INTO employees (first_name, last_name,) VALUES ("${addEmployeeAnswers.firstName}", ("${addEmployeeAnswers.lastName}")`)
+const addNewEmployee = async (db, addEmployeeAnswers) => {
+  await db.query(
+    `INSERT INTO employees (first_name, last_name,) VALUES ("${addEmployeeAnswers.firstName}", ("${addEmployeeAnswers.lastName}")`
+  );
 };
 
 module.exports = {
   addNewDepartment,
   addNewRole,
-  addNewEmployee
+  addNewEmployee,
 };
