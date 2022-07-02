@@ -4,6 +4,68 @@ const { getDepartments } = require("./utils/view");
 const { employeeList } = require("./utils/view");
 const { getRoles } = require("./utils/view");
 
+const addDepartmentQuestions = [
+  {
+    name: "newDepartment",
+    type: "input",
+    message: "What is the name of the department you would like to add?",
+  },
+];
+
+const addRoleQuestions = [
+  {
+    name: "newRole",
+    type: "input",
+    message: "What is the name of the role?",
+  },
+  {
+    name: "salary",
+    type: "input",
+    message: "What is the salary of the role?",
+  },
+  {
+    name: "roleDepartment",
+    type: "list",
+    message: "What department does the role belong to?",
+    //choices: funcion to map through the departments
+    choices: ["test5", "test6"],
+  },
+];
+
+const addEmployeeQuestions = [
+  {
+    name: "firstName",
+    type: "input",
+    message: "What is the employee's first name?",
+    //i am prompted with the question 'what is the employee's first name?'
+    //i enter the fn
+    //i am prompted with the question 'what is the employee's last name?'
+    //i enter the ln
+    //i am prompted with the question 'what is the employee's role?'
+    //i am given a list of the roles to choose from
+    //i am prompted with the question 'who is the employee's manager?'
+  },
+  {
+    name: "lastName",
+    type: "input",
+    message: "What is their last name?",
+  },
+  {
+    name: "role",
+    type: "list",
+    message: "what is the employee's role?",
+    //choices: funcion to map through the roles
+    choices: ["test", "test2"],
+  },
+  {
+    name: "manager",
+    type: "list",
+    message: "who is the employee's manager?",
+    //choices: funcion to map through the managers
+    choices: ["test3", "test4"],
+  },
+];
+
 const init = async () => {
   //In progress
   let inProgress = true;
@@ -75,39 +137,19 @@ const init = async () => {
 
     if (pickAnOption === "addADepartment") {
       console.log("DEPARTMENT ADDED!!");
-      //when i choose add a department
-      //i am prompted with the question 'what is the name of the department?'
-      //once i add a department
-      //it will update the departments in the tables
-      //i am presented with the pickAnOption list again
+      const addDepartmentAnswers = await inquirer.prompt(
+        addDepartmentQuestions
+      );
     }
 
     if (pickAnOption === "addARole") {
       console.log("ROLE ADDED!!");
-      //when i choose add a role
-      //i am prompted with the question 'what is the name of the role?'
-      //when i add a role
-      //i am prompted with the question 'what is the salary of the role?'
-      //when i add the salary
-      //i am prompted with the question 'what department does the role belong to?'
-      //i am given a list of the roles to choose from
-      //it will update the tables with role name and salary and department
-      //i am presented with the pickAnOption list again
+      const addRoleAnswers = await inquirer.prompt(addRoleQuestions);
     }
 
     if (pickAnOption === "addAnEmployee") {
       console.log("EMPLOYEE ADDED!!");
-      //when i choose add an employee
-      //i am prompted with the question 'what is the employee's first name?'
-      //i enter the fn
-      //i am prompted with the question 'what is the employee's last name?'
-      //i enter the ln
-      //i am prompted with the question 'what is the employee's role?'
-      //i am given a list of the roles to choose from
-      //i am prompted with the question 'who is the employee's manager?'
-      //i am given a list of the managers to choose from
-      //it will update the employee in the tables
-      //i am presented with the pickAnOption list again
+      const addEmployeeAnswers = await inquirer.prompt(addEmployeeQuestions);
     }
 
     if (pickAnOption === "updateEmployeeRole") {
