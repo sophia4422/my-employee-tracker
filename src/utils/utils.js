@@ -17,17 +17,17 @@ const addNewEmployee = async (db, addEmployeeAnswers) => {
   );
 };
 
-//get a list of the departments
-const departmentList = (departments) => {
-  return departments.map((department) => ({
-    name: department.department_name,
-    value: department.id,
-  }));
-};
+// //get a list of the departments
+// const departmentList = async () => {
+//   const allDepartments = await db.query(`SELECT * FROM departments`);
+//   return allDepartments.map((department) => {
+//     return { name: department.department_name, value: department.id };
+//   });
+// };
 
 module.exports = {
   addNewDepartment,
   addNewRole,
   addNewEmployee,
-  departmentList,
+  // departmentList,
 };

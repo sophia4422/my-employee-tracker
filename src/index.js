@@ -1,4 +1,5 @@
 const inquirer = require("inquirer");
+const cTable = require("console.table");
 const database = require("./lib/db");
 const { getDepartments } = require("./utils/view");
 const { employeeList } = require("./utils/view");
@@ -7,10 +8,10 @@ const {
   addNewDepartment,
   addNewRole,
   addNewEmployee,
-  departmentList,
+  // departmentList,
 } = require("./utils/utils");
 
-const departments = getDepartments(database);
+// const departments = getDepartments(database);
 
 const addDepartmentQuestions = [
   {
@@ -36,7 +37,8 @@ const addRoleQuestions = [
     type: "list",
     message: "What department does the role belong to?",
     //choices: funcion to map through the departments
-    choices: departmentList(departments),
+    // choices: departmentList(departments),
+    choices: ["test7", "test8"],
   },
 ];
 

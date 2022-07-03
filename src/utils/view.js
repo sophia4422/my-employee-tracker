@@ -1,3 +1,5 @@
+const cTable = require("console.table");
+
 const getDepartments = async (db) => {
   const [departments] = await db.query("SELECT * FROM departments");
   console.table(departments);
