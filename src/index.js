@@ -7,7 +7,10 @@ const {
   addNewDepartment,
   addNewRole,
   addNewEmployee,
+  departmentList,
 } = require("./utils/utils");
+
+const departments = getDepartments(database);
 
 const addDepartmentQuestions = [
   {
@@ -33,7 +36,7 @@ const addRoleQuestions = [
     type: "list",
     message: "What department does the role belong to?",
     //choices: funcion to map through the departments
-    choices: ["test5", "test6"],
+    choices: departmentList(departments),
   },
 ];
 
@@ -114,22 +117,16 @@ const init = async () => {
 
     if (pickAnOption === "viewAllDepartments") {
       console.log("Here are the departments...");
-      //display a table in the console with the id and name columns
-      //the id will be 1,2,3,4 and the name will be: engineers, finance, legal, sales
       await getDepartments(db);
     }
 
     if (pickAnOption === "viewAllRoles") {
       console.log("Here are all the roles...");
-      //display a table in the console with the columns id, title, department & salary
-      //title will be the roles, eg Sales Lead, Software Engineer, Lawyer etc
-      //each role will belong to a department eg SE = Engineering, Lawyer = Legal
       await getRoles(db);
     }
 
     if (pickAnOption === "viewAllEmployees") {
       console.log("Here are all the employees...");
-      //view a table in the console with the id, first_name, last-name, title, department, salary and the employee's manager
       await employeeList(db);
     }
 
@@ -144,11 +141,13 @@ const init = async () => {
     if (pickAnOption === "addARole") {
       console.log("ROLE ADDED!!");
       const addRoleAnswers = await inquirer.prompt(addRoleQuestions);
+      addNewRole(db, addRoleAnswers);
     }
 
     if (pickAnOption === "addAnEmployee") {
       console.log("EMPLOYEE ADDED!!");
       const addEmployeeAnswers = await inquirer.prompt(addEmployeeQuestions);
+      addNewEmployee(db, addEmployeeAnswers);
     }
 
     if (pickAnOption === "updateEmployeeRole") {
